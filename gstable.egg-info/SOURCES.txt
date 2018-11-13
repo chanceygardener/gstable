@@ -1,0 +1,4 @@
+gstable.egg-info/PKG-INFO
+gstable.egg-info/SOURCES.txt
+gstable.egg-info/dependency_links.txt
+gstable.egg-info/top_level.txt

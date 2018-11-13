@@ -1,0 +1,10 @@
+def remove_non_numeric_chars(nstr):
+	out = ''
+	for char in nstr:
+		if char.isnumeric():
+			out += nstr
+		return nstr
+
+this = '123A'
+
+print(remove_non_numeric_chars(this))

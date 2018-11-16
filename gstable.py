@@ -27,6 +27,20 @@ def run(script_name='processor.py'):
 	exec(script)
 	return load
 
+def alph_to_base_10(astr):
+	'''given a string in the format of MS excel column headers, 
+	return the index of that column in base 10 [ind starts at 0]'''
+	icount = 0
+	chlist = [(ord(char.lower())-ord('a')+1) for char in astr]
+	mcount = len(chlist)
+	for ind, ch in enumerate(chlist):
+		ind += 1
+		coef = 26**(mcount-ind)
+		icount += ch*coef
+	icount -= 1
+	return icount
+
+
 
 def congen(p):
 	if not isinstance(p, bool):

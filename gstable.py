@@ -756,7 +756,7 @@ class FileMap:
 
 class GsTable:
 	
-	def __init__(self, indat, load, skip_columns=False, from_array=False,headed=True):
+	def __init__(self, indat, load=None, skip_columns=False, from_array=False,headed=True):
 		self.headed=headed
 		if from_array:
 			self.infile_name = '' # this is no longer needed; subtable class takes care of it
@@ -1066,7 +1066,7 @@ class QATable(GsTable):
 		
 class LoadTable(GsTable):
 
-	def __init__(self, infile_name, load, skip_columns=False, headed=True, breakout_set=False, from_array=False):
+	def __init__(self, infile_name, load=None, skip_columns=False, headed=True, breakout_set=False, from_array=False):
 		### PUT A FUNCTION HERE THAT CONCATS TO GIVE BREAKOUT COLUMNS UNIQUE COLHASH KEYS###
 		GsTable.__init__(self, infile_name, load=load, skip_columns=skip_columns)
 		# concatenate breakout identifier with each repeated header that comprises breakout column
